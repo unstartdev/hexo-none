@@ -24,4 +24,4 @@ after_success:
    - git config --global user.email "${useremail}"
    - git add .
    - git commit -m "Travis CI Auto Builder `date`"
-   - git push --quiet origin master
+   - git push --quiet origin none
