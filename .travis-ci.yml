@@ -10,8 +10,11 @@ branches:
     only:
        - master
 
+before_install:
+   - git checkout none
+
 install:
-   - npm install hexo-cli
+   - npm install hexo-cli -g
 
 script:
    - mkdir dir;cd dir;hexo init;cd ..
