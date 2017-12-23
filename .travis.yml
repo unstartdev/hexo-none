@@ -17,7 +17,7 @@ install:
    - npm install hexo-cli -g
 
 script:
-   - cd dir;git checkout none;hexo init
+   - cd dir;git checkout none;mkdir source;hexo init;cd ..
 
 after_success:
    - git config --global user.name "${username}"
