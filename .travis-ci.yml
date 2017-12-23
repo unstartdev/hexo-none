@@ -11,13 +11,13 @@ branches:
        - master
 
 before_install:
-   - git checkout none
+   - git clone https://${usertoken}@github.com/unstartdev/hexo-none.git dir
 
 install:
    - npm install hexo-cli -g
 
 script:
-   - mkdir dir;cd dir;hexo init;cd ..
+   - cd dir;git checkout none;hexo init
 
 after_success:
    - git config --global user.name "${username}"
